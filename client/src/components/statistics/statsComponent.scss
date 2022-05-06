@@ -1,0 +1,48 @@
+.stats-container {
+  background-color: #27293c;
+  margin: 1rem;
+  max-width: 840px;
+  border-radius: 12px;
+}
+
+.stats-wrapper {
+  padding: 2rem;
+}
+
+.stats-wl-spots__container,
+.stats-applications__container,
+.stats-mint-price__container {
+  p:nth-child(1) {
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 32px;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: center;
+  }
+  p:nth-child(2) {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+}
+
+.stats-wl-spots__container,
+.stats-applications__container {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 550px) {
+  .stats-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .stats-wl-spots__container,
+  .stats-applications__container {
+    margin-bottom: 0;
+  }
+}

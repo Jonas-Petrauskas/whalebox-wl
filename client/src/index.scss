@@ -1,0 +1,45 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  background-color: #1e1e2e;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 100%;
+  padding: 14px 18px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ff4467;
+  border-radius: 6px;
+  background-color: #ff4467;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  font-family: Barlow, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+button:hover {
+  border-color: #cc3652;
+  background-color: #cc3652;
+}

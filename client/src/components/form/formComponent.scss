@@ -1,0 +1,129 @@
+form {
+  background-color: #27293c;
+  margin: 1rem;
+  max-width: 840px;
+  border-radius: 12px;
+}
+
+.form-timer {
+  text-align: left;
+  padding: 12px 32px;
+  background-color: #ff4467;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.form-wrapper {
+  padding: 2rem;
+}
+
+.form-text__container {
+  text-align: left;
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    line-height: 36px;
+  }
+  p {
+    margin-bottom: 24px;
+    max-width: 400px;
+    color: hsla(0, 0%, 100%, 0.3);
+  }
+}
+
+// label
+
+label {
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-accessCode__container label {
+  width: 100%;
+}
+
+.input-walletAddess__container label {
+  width: 100%;
+}
+
+// input
+
+.inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+}
+
+input {
+  // width: 100%;
+  height: 48px;
+  margin-bottom: 0px;
+  padding-right: 16px;
+  padding-left: 16px;
+  border: 1px none #000;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  outline: none;
+}
+
+.input-wallet-address {
+  width: 100%;
+}
+
+.input-access-code {
+  width: 100%;
+}
+.input-walletAddess__container,
+.input-accessCode__container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-right: 12px;
+}
+
+.input-walletAddess__container {
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.input-accessCode__container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+// button
+
+
+
+.error-message {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .inputs-wrapper {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .input-walletAddess__container {
+    width: 130%;
+    margin-bottom: 0;
+  }
+
+  .input-accessCode__container {
+    width: 70%;
+    margin-bottom: 0;
+  }
+
+  button {
+    width: 70%;
+  }
+}

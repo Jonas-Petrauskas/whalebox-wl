@@ -1,0 +1,64 @@
+.desktop-nav {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: 0%;
+
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 250px;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #27293c;
+}
+
+.desktop-wallet-connect,
+.desktop-nav__links {
+  margin: 0 16px;
+}
+
+.desktop-nav__whaleBox__logo {
+  display: flex;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 0px 24px;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 100ms ease-in-out;
+
+  img {
+    width: 90px;
+  }
+}
+
+.desktop-nav__whaleBox__logo:hover {
+  opacity: 0.8;
+}
+
+// botton container
+
+.desktop-nav__bottom__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 60px;
+  padding: 0 32px;
+  height: 100%;
+}
+
+.desktop-nav__bottom__links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.desktop-nav__bottom__text {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  color: hsla(0, 0%, 100%, 0.3);
+  font-size: 14px;
+  text-align: center;
+}

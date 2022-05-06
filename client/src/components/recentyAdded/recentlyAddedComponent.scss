@@ -1,0 +1,128 @@
+.recentlyAdded-container {
+  background-color: #27293c;
+  margin: 1rem;
+  max-width: 840px;
+  border-radius: 12px;
+}
+
+.recentyAdded-wrapper {
+  padding: 2rem;
+}
+
+// title
+
+.title-container {
+  display: flex;
+  margin-bottom: 32px;
+  h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    color: white;
+    line-height: 1.2em;
+    font-weight: 700;
+  }
+  .live-badge {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    padding: 4px 12px;
+    border-radius: 6px;
+    background-color: #ff4467;
+  }
+}
+
+.live-badge__text {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+// label
+
+.overflow {
+  overflow: scroll;
+  overflow-y: hidden;
+
+  display: grid;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.label-container {
+  text-align: left;
+  display: grid;
+  color: #27293c;
+  margin-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+
+  // display: flex;
+  // justify-content: space-between;
+  // color: white;
+  // margin-bottom: 12px;
+  // padding-right: 16px;
+  // padding-left: 16px;
+
+  p {
+    margin-bottom: 0px;
+    padding-right: 24px;
+    font-size: 0.75rem;
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.5);
+  }
+}
+
+// live-data
+
+.live-data-container {
+  display: grid;
+  min-height: 48px;
+  padding: 8px 16px;
+
+  text-align: left;
+
+  align-items: center;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  border-radius: 6px;
+  background-color: hsla(0, 0%, 100%, 0.05);
+  // grid-column-start: span 1;
+  // grid-column-end: span 1;
+  // grid-row-start: span 1;
+  // grid-row-end: span 1;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // min-height: 48px;
+  // margin-bottom: 12px;
+  // padding: 8px 16px;
+  // color: white;
+  // border-radius: 6px;
+  p {
+    margin: 0;
+    color: hsla(0, 0%, 100%, 0.7);
+    font-size: 14px;
+    line-height: 1.2em;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .overflow {
+    overflow-x: hidden;
+  }
+}
