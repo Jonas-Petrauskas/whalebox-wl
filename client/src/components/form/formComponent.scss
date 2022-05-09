@@ -1,6 +1,6 @@
 form {
   background-color: #27293c;
-  margin: 1rem;
+  margin: 1rem auto;
   max-width: 840px;
   border-radius: 12px;
 }
@@ -85,6 +85,7 @@ input {
 .input-accessCode__container {
   display: flex;
   flex-direction: column;
+  position: relative;
   text-align: left;
   margin-right: 12px;
 }
@@ -100,8 +101,6 @@ input {
 }
 
 // button
-
-
 
 .error-message {
   color: white;
@@ -126,4 +125,15 @@ input {
   button {
     width: 70%;
   }
+}
+
+// error message
+
+.error-message {
+  color: black;
+  position: absolute;
+  top: 100%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: white;
 }

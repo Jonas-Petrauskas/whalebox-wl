@@ -47,8 +47,15 @@ function FormComponent() {
               className="input-access-code"
               type="accessCode"
               placeholder="ARCANUM50"
-              {...register("accessCode")}
+              {...register("accessCode", {
+                required: "This is required",
+                minLength: { value: 9, message: "Access code is too short" },
+                maxLength: { value: 9, message: "Access code is too long" },
+              })}
             />
+            {errors.accessCode && (
+              <p className="error-message">{errors.accessCode.message}</p>
+            )}
           </div>
           <button type="submit">APPLY</button>
         </div>

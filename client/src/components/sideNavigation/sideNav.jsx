@@ -21,8 +21,7 @@ const SideNav = () => {
 
   return (
     <div className="mobile-navigation-bar">
-      {/* <div className={navbarOpen ? "mobile-overlay active" : "mobile-overlay"}>
-        </div> */}
+      {/* <div className="overlay"> */}
       <div className="mobile-nav__hamburger__link" onClick={handleToggle}>
         <img src={hamburger} className="mobile-nav__hamburger" />
       </div>
@@ -30,6 +29,9 @@ const SideNav = () => {
       <a href="#" className="mobile-nav__logo__link">
         <img src={whaleBoxLogo} className="mobile-nav__logo" />
       </a>
+      <div
+        className={navbarOpen ? "overlay-active" : "overlay-not-active"}
+      ></div>
       <nav
         className={navbarOpen ? "mobile-nav__menu active" : "mobile-nav__menu"}
       >
@@ -45,7 +47,6 @@ const SideNav = () => {
 
           <li>
             <img className="home-icon" src={homeGray} alt="" />
-            {/* <img className="home-icon active" src={homeRed} alt="" /> */}
             <a href="">Unboxing</a>
           </li>
           <li>
@@ -68,11 +69,13 @@ const SideNav = () => {
           </div>
           <div className="mobile-nav__bottom__text">
             <p>
-              All additional information is listed at the bottom of the page
+              All additional information is listed at the{" "}
+              <a className="caption__white-link" href="#">bottom of the page</a>
             </p>
           </div>
         </div>
       </nav>
+
       {/* </div> */}
     </div>
   );

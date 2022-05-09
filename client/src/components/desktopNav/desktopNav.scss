@@ -14,9 +14,17 @@
   flex-direction: column;
   background-color: #27293c;
 }
+.desktop-nav__links > ul > li {
+  width: 100%;
+  padding-left: 16px;
+}
 
-.desktop-wallet-connect,
-.desktop-nav__links {
+.desktop-nav__links > ul > li:hover {
+  border-left-style: solid;
+  border-left-color: #ff4467;
+}
+
+.desktop-wallet-connect {
   margin: 0 16px;
 }
 
@@ -53,6 +61,15 @@
 .desktop-nav__bottom__links {
   display: flex;
   justify-content: space-evenly;
+}
+
+.desktop-nav__bottom__links > a {
+  opacity: 0.5;
+  transition: opacity 100ms ease-in-out;
+}
+
+.desktop-nav__bottom__links > a:hover {
+  opacity: 1;
 }
 
 .desktop-nav__bottom__text {

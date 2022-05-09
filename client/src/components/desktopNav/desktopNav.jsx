@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./desktopNav.scss";
 
 import WalletConnect from "../walletConnect/walletComponent";
 
-import hamburger from "../../assets/hamburger-ico.svg";
 import whaleBoxLogo from "../../assets/whalebox-with-bg.jpg";
-import crossIcon from "../../assets/cross-ico.svg";
 import homeGray from "../../assets/home-ico.svg";
 import homeRed from "../../assets/home-ico-red.svg";
 import pageGray from "../../assets/page-ico.svg";
+import pageRed from "../../assets/page-ico-red.svg";
 import whitelistGray from "../../assets/free-drop-ico.svg";
+import whitelistRed from "../../assets/free-drop-ico-red.svg";
 import twitterSvg from "../../assets/twitter-ico.svg";
 import discordSvg from "../../assets/discord-ico.svg";
 
 const DesktopSideNav = () => {
+  const [openHome, setOpenHome] = useState(false);
+  const [openWL, setOpenWL] = useState(false);
+  const [openPage, setOpenPage] = useState(false);
+
   return (
     <div className="desktop-nav">
       <a href="" className="desktop-nav__whaleBox__logo">
@@ -21,17 +25,33 @@ const DesktopSideNav = () => {
       </a>
       <nav className="desktop-nav__links">
         <ul>
-          <li>
-            <img className="home-icon" src={homeGray} alt="" />
-            {/* <img className="home-icon active" src={homeRed} alt="" /> */}
+          <li
+            onMouseOver={() => setOpenHome(true)}
+            onMouseOut={() => setOpenHome(false)}
+          >
+            <img
+              className="home-icon"
+              src={openHome ? homeRed : homeGray}
+              alt=""
+            />
             <a href="">Unboxing</a>
           </li>
-          <li>
-            <img className="" src={whitelistGray} alt="" />
+          <li
+            onMouseOver={() => setOpenWL(true)}
+            onMouseOut={() => setOpenWL(false)}
+          >
+            <img
+              className=""
+              src={openWL ? whitelistRed : whitelistGray}
+              alt=""
+            />
             <a href="">Whitelist</a>
           </li>
-          <li>
-            <img className="" src={pageGray} alt="" />
+          <li
+            onMouseOver={() => setOpenPage(true)}
+            onMouseOut={() => setOpenPage(false)}
+          >
+            <img className="" src={openPage ? pageRed : pageGray} alt="" />
             <a href="">How It works</a>
           </li>
         </ul>
@@ -49,7 +69,10 @@ const DesktopSideNav = () => {
           </a>
         </div>
         <p className="desktop-nav__bottom__text">
-          All additional information is listed at the bottom of the page
+          All additional information is listed at the{" "}
+          <a className="caption__white-link" href="#">
+            bottom of the page
+          </a>
         </p>
       </div>
     </div>
