@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { Amplify, API, graphqlOperation } from "aws-amplify";
+import { listTodos } from "../../graphql/queries";
+
 import "./recentlyAddedComponent.scss";
 
+import awsExports from "../../aws-exports";
+Amplify.configure(awsExports);
+
 const RecentlyAdded = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  const fetchItems = async () => {
+    try {
+      const itemsData = await API.graphql(graphqlOperation(listTodos));
+      const itemsList = itemsData.data.listTodos.items;
+      console.log(itemsList);
+      setItems(itemsList);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className="recentlyAdded-container">
       <div className="recentyAdded-wrapper">
@@ -18,6 +41,13 @@ const RecentlyAdded = () => {
             <p>TIME APPLIED</p>
           </div>
           <div className="overflow">
+            {items.map((item, index) => (
+              <div className="live-data-container" key={index}>
+                <p>{item.walletAddress}</p>
+                <p>{item.accessCode}</p>
+                <p>{item.timestamp}</p>
+              </div>
+            ))}
             <div className="live-data-container">
               <p>0x9168DAe2296d9Ee5aa...</p>
               <p>ARCANUM50</p>
