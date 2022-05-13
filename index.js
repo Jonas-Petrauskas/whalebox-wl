@@ -1,5 +1,5 @@
 import "./formComponent.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import CountdownTimer from "../countDownTimer/countDownComponent";
 import moment from "moment";
@@ -10,8 +10,8 @@ import { createTodo } from "../../graphql/mutations";
 import awsExports from "../../aws-exports";
 Amplify.configure(awsExports);
 
-const dateNow = moment().format("MMM Do, YYYY h:mm");
-console.log(dateNow);
+const dateNow = moment().format("MMM Do YYYY, h:mm");
+console.log(typeof dateNow);
 const id = Math.random().toString(36).substring(2);
 // const initialState = {
 //   id: id,
@@ -29,17 +29,17 @@ function FormComponent() {
   // }
 
   const createItem = async (data) => {
+    const item = {
+      id: id,
+      walletAddress: data.walletAddess,
+      accessCode: data.accessCode,
+      timestamp: dateNow,
+    };
     try {
-      const item = {
-        id: id,
-        walletAddress: data.walletAddess,
-        accessCode: data.accessCode,
-        timestamp: dateNow,
-      };
       console.log(data);
       // if (!data.walletAddress || !data.accessCode) return;
-      // const itemState = { ...formState };
-      // setInput([...items, itemState]);
+      // const itemm = { ...formState };
+      // setInput([...items, itemm]);
       // setFormState(initialState);
       await API.graphql(graphqlOperation(createTodo, { input: item }));
       reset({

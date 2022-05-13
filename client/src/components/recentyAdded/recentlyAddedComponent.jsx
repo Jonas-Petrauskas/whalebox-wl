@@ -25,6 +25,7 @@ const RecentlyAdded = () => {
       console.log(err);
     }
   };
+
   return (
     <div className="recentlyAdded-container">
       <div className="recentyAdded-wrapper">
@@ -43,31 +44,11 @@ const RecentlyAdded = () => {
           <div className="overflow">
             {items.map((item, index) => (
               <div className="live-data-container" key={index}>
-                <p>{item.walletAddress}</p>
+                <p>{`${item.walletAddress.slice(0, 20)}...`}</p>
                 <p>{item.accessCode}</p>
                 <p>{item.timestamp}</p>
               </div>
             ))}
-            <div className="live-data-container">
-              <p>0x9168DAe2296d9Ee5aa...</p>
-              <p>ARCANUM50</p>
-              <p>April 15, 2022 20:45</p>
-            </div>
-            <div className="live-data-container">
-              <p>0x9168DAe2296d9Ee5aa...</p>
-              <p>ARCANUM50</p>
-              <p>April 15, 2022 20:45</p>
-            </div>
-            <div className="live-data-container">
-              <p>0x9168DAe2296d9Ee5aa...</p>
-              <p>ARCANUM50</p>
-              <p>April 15, 2022 20:45</p>
-            </div>
-            <div className="live-data-container">
-              <p>0x9168DAe2296d9Ee5aa...</p>
-              <p>ARCANUM50</p>
-              <p>April 15, 2022 20:45</p>
-            </div>
           </div>
         </div>
       </div>
