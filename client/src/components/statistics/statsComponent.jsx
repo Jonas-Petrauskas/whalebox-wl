@@ -1,7 +1,7 @@
 import React from "react";
 import "./statsComponent.scss";
 
-const Stats = () => {
+const Stats = ({ count }) => {
   return (
     <div className="stats-container">
       <div className="stats-wrapper">
@@ -10,7 +10,7 @@ const Stats = () => {
           <p>Whitelist Spots</p>
         </div>
         <div className="stats-applications__container">
-          <p>15765</p>
+          <p>{count}</p>
           <p>Applications</p>
         </div>
         <div className="stats-mint-price__container">

@@ -1,7 +1,15 @@
-.timer {
+.timer-container {
   color: #fff;
   font-size: 18px;
   line-height: 1.2em;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 0.8rem;
+  padding-right: 0.2rem;
 }

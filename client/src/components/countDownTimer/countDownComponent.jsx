@@ -1,52 +1,38 @@
 import React, { useEffect, useState } from "react";
 import "./countDownComponent.scss";
+import { getRemainingTimeUntilMsTimestamp } from "../../utils/countdownTimerUtils";
 
+const defaultRemainingTime = {
+  seconds: "00",
+  minutes: "00",
+  hours: "00",
+  days: "00",
+};
 const CountdownTimer = () => {
-  const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`06/01/${year}`) - +new Date();
-
-    let timeLeft = {};
-
-    if (difference > 0) {
-      timeLeft = {
-        D: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        H: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        M: Math.floor((difference / 1000 / 60) % 60),
-        S: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
-  };
-
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [remainingTime, setRemainingTime] = useState(defaultRemainingTime);
+  const countdownTimestampMs = 1656626400000;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft());
+    const intervalId = setInterval(() => {
+      updateRemainingTime(countdownTimestampMs);
     }, 1000);
+    return () => clearTimeout(intervalId);
+  }, [countdownTimestampMs]);
 
-    return () => clearTimeout(timer);
-  });
-
-  const timerComponents = [];
-
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
-      return;
-    }
-
-    timerComponents.push(
-      <span className="timer">
-        {timeLeft[interval]} {interval}{" "}
-      </span>
-    );
-  });
+  function updateRemainingTime(countdown) {
+    setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown));
+  }
 
   return (
-    <div>
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+    <div className="timer-container">
+      <span>{remainingTime.days}</span>
+      <span className="days">D</span>
+      <span>{remainingTime.hours}</span>
+      <span className="hours">H</span>
+      <span>{remainingTime.minutes}</span>
+      <span className="minutes">M</span>
+      <span>{remainingTime.seconds}</span>
+      <span className="seconds">S</span>
     </div>
   );
 };

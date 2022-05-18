@@ -44,7 +44,7 @@ const RecentlyAdded = () => {
           <div className="overflow">
             {items.map((item, index) => (
               <div className="live-data-container" key={index}>
-                <p>{`${item.walletAddress.slice(0, 20)}...`}</p>
+                <p>{`${item.walletAddress.slice(0, 20)} ...`}</p>
                 <p>{item.accessCode}</p>
                 <p>{item.timestamp}</p>
               </div>
