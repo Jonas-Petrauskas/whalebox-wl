@@ -19,12 +19,15 @@ const RecentlyAdded = () => {
     try {
       const itemsData = await API.graphql(graphqlOperation(listTodos));
       const itemsList = itemsData.data.listTodos.items;
-      console.log(itemsList);
       setItems(itemsList);
     } catch (err) {
       console.log(err);
     }
   };
+
+  const firstFourItems = items.slice(-4);
+
+  console.log(items);
 
   return (
     <div className="recentlyAdded-container">
@@ -42,7 +45,7 @@ const RecentlyAdded = () => {
             <p>TIME APPLIED</p>
           </div>
           <div className="overflow">
-            {items.map((item, index) => (
+            {firstFourItems.map((item, index) => (
               <div className="live-data-container" key={index}>
                 <p>{`${item.walletAddress.slice(0, 20)} ...`}</p>
                 <p>{item.accessCode}</p>

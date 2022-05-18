@@ -34,6 +34,9 @@ function FormComponent() {
         walletAddess: "",
         accessCode: "",
       });
+      setTimeout(() => {
+        window.location.reload(false);
+      }, 500);
     } catch (err) {
       console.log("error creating todo:", err);
     }
@@ -99,7 +102,12 @@ function FormComponent() {
                 <p className="error-message">{errors.accessCode.message}</p>
               )}
             </div>
-            <button onClick={incrementCount} type="submit">
+            <button
+              onClick={() => {
+                incrementCount();
+              }}
+              type="submit"
+            >
               APPLY
             </button>
           </div>
