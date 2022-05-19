@@ -18,7 +18,6 @@ function App() {
         </div>
         <div className="prev-content">
           <FormComponent />
-          {/* <Stats /> */}
           <RecentlyAdded />
           <Footer />
         </div>
