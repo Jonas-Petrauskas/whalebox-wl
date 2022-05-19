@@ -42,8 +42,6 @@ export const deleteTable = /* GraphQL */ `
       accessCode
       code
       timestamp
-      createdAt
-      updatedAt
     }
   }
 `;
