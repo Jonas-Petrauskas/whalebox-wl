@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-import { listTodos } from "../../graphql/queries";
+import { listTables } from "../../graphql/queries";
 
 import "./recentlyAddedComponent.scss";
 
@@ -17,8 +17,8 @@ const RecentlyAdded = () => {
 
   const fetchItems = async () => {
     try {
-      const itemsData = await API.graphql(graphqlOperation(listTodos));
-      const itemsList = itemsData.data.listTodos.items;
+      const itemsData = await API.graphql(graphqlOperation(listTables));
+      const itemsList = itemsData.data.listTables.items;
       setItems(itemsList);
     } catch (err) {
       console.log(err);
@@ -26,8 +26,6 @@ const RecentlyAdded = () => {
   };
 
   const firstFourItems = items.slice(-4);
-
-  console.log(items);
 
   return (
     <div className="recentlyAdded-container">
@@ -47,7 +45,7 @@ const RecentlyAdded = () => {
           <div className="overflow">
             {firstFourItems.map((item, index) => (
               <div className="live-data-container" key={index}>
-                <p>{`${item.walletAddress.slice(0, 20)} ...`}</p>
+                <p>{`${item.walletAddress.slice(0, 20)}...`}</p>
                 <p>{item.accessCode}</p>
                 <p>{item.timestamp}</p>
               </div>

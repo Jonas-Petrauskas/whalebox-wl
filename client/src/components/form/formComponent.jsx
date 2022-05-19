@@ -6,7 +6,7 @@ import moment from "moment";
 import Stats from "../statistics/statsComponent";
 
 import { Amplify, API, graphqlOperation } from "aws-amplify";
-import { createTodo } from "../../graphql/mutations";
+import { createTable } from "../../graphql/mutations";
 
 import awsExports from "../../aws-exports";
 Amplify.configure(awsExports);
@@ -29,7 +29,7 @@ function FormComponent() {
         accessCode: data.accessCode,
         timestamp: dateNow,
       };
-      await API.graphql(graphqlOperation(createTodo, { input: item }));
+      await API.graphql(graphqlOperation(createTable, { input: item }));
       reset({
         walletAddess: "",
         accessCode: "",

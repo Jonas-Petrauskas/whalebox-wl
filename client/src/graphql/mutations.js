@@ -1,45 +1,46 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo = /* GraphQL */ `
-  mutation CreateTodo(
-    $input: CreateTodoInput!
-    $condition: ModelTodoConditionInput
+export const createTable = /* GraphQL */ `
+  mutation CreateTable(
+    $input: CreateTableInput!
+    $condition: ModelTableConditionInput
   ) {
-    createTodo(input: $input, condition: $condition) {
+    createTable(input: $input, condition: $condition) {
       id
       walletAddress
       accessCode
+      code
+      timestamp
+    }
+  }
+`;
+export const updateTable = /* GraphQL */ `
+  mutation UpdateTable(
+    $input: UpdateTableInput!
+    $condition: ModelTableConditionInput
+  ) {
+    updateTable(input: $input, condition: $condition) {
+      id
+      walletAddress
+      accessCode
+      code
       timestamp
       createdAt
       updatedAt
     }
   }
 `;
-export const updateTodo = /* GraphQL */ `
-  mutation UpdateTodo(
-    $input: UpdateTodoInput!
-    $condition: ModelTodoConditionInput
+export const deleteTable = /* GraphQL */ `
+  mutation DeleteTable(
+    $input: DeleteTableInput!
+    $condition: ModelTableConditionInput
   ) {
-    updateTodo(input: $input, condition: $condition) {
+    deleteTable(input: $input, condition: $condition) {
       id
       walletAddress
       accessCode
-      timestamp
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteTodo = /* GraphQL */ `
-  mutation DeleteTodo(
-    $input: DeleteTodoInput!
-    $condition: ModelTodoConditionInput
-  ) {
-    deleteTodo(input: $input, condition: $condition) {
-      id
-      walletAddress
-      accessCode
+      code
       timestamp
       createdAt
       updatedAt
