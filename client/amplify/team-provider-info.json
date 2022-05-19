@@ -1,15 +1,15 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-whaleboxbackend-dev-163411-authRole",
-      "UnauthRoleArn": "arn:aws:iam::848941654438:role/amplify-whaleboxbackend-dev-163411-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::848941654438:role/amplify-whaleboxbackend-dev-163411-authRole",
+      "AuthRoleName": "amplify-kandyfulltable-dev-100548-authRole",
+      "UnauthRoleArn": "arn:aws:iam::848941654438:role/amplify-kandyfulltable-dev-100548-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::848941654438:role/amplify-kandyfulltable-dev-100548-authRole",
       "Region": "eu-west-1",
-      "DeploymentBucketName": "amplify-whaleboxbackend-dev-163411-deployment",
-      "UnauthRoleName": "amplify-whaleboxbackend-dev-163411-unauthRole",
-      "StackName": "amplify-whaleboxbackend-dev-163411",
-      "StackId": "arn:aws:cloudformation:eu-west-1:848941654438:stack/amplify-whaleboxbackend-dev-163411/98a5abf0-d200-11ec-954d-028bb125edb5",
-      "AmplifyAppId": "d29w36ugrffc8t"
+      "DeploymentBucketName": "amplify-kandyfulltable-dev-100548-deployment",
+      "UnauthRoleName": "amplify-kandyfulltable-dev-100548-unauthRole",
+      "StackName": "amplify-kandyfulltable-dev-100548",
+      "StackId": "arn:aws:cloudformation:eu-west-1:848941654438:stack/amplify-kandyfulltable-dev-100548/7f65ea20-d74a-11ec-a3c5-0a9711d47767",
+      "AmplifyAppId": "duwpdw92ndxsv"
     }
   }
 }

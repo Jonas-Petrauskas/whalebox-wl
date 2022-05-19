@@ -1,5 +1,5 @@
 projects:
-  whaleboxbackend:
+  kandyfulltable:
     schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js

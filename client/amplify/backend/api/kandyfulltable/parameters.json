@@ -1,5 +1,5 @@
 {
-  "AppSyncApiName": "whaleboxbackend",
+  "AppSyncApiName": "kandyfulltable",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false
 }

@@ -1,6 +1,6 @@
 {
   "api": {
-    "whaleboxbackend": {
+    "kandyfulltable": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
