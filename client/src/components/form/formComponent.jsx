@@ -17,7 +17,6 @@ const dateNow = moment().format("MMM Do, YYYY h:mm");
 const id = Math.random().toString(36).substring(2);
 
 function FormComponent() {
-  const [count, setCount] = useState(0);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -42,9 +41,19 @@ function FormComponent() {
     }
   }
 
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
+  let usersItemsList = [];
+  let usersItemsListLength = 0;
+
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].walletAddress) {
+      usersItemsList.push(items[i]);
+    }
+  }
+
+  usersItemsListLength = usersItemsList.length;
+
+  const startApplicationsPoint = 2000;
+  const count = usersItemsListLength + startApplicationsPoint;
 
   const createItem = async (data) => {
     try {
@@ -78,10 +87,10 @@ function FormComponent() {
           }
         }
       } else {
-        console.log("code not valid");
+        console.log("code is not in the database");
       }
     } catch (err) {
-      console.log("error creating todo:", err);
+      console.log("error creating Table:", err);
     }
   };
 
@@ -93,8 +102,8 @@ function FormComponent() {
   } = useForm();
 
   return (
-    <div>
-      <PopUp />
+    <div className="form-position">
+      {/* <PopUp /> */}
       <form onSubmit={handleSubmit(createItem)}>
         <div className="form-timer">
           <CountdownTimer />
@@ -115,7 +124,7 @@ function FormComponent() {
                 type="walletAddess"
                 placeholder="0x9168DAe2296d9Ee5aaF438cf23c4130a815bAC61"
                 {...register("walletAddess", {
-                  required: "This is required",
+                  required: "Required field",
                   minLength: {
                     value: 42,
                     message: "Wallet addess is too short",
@@ -137,7 +146,7 @@ function FormComponent() {
                 type="accessCode"
                 placeholder="ARCANUM50"
                 {...register("accessCode", {
-                  required: "This is required",
+                  required: "Required field",
                   minLength: { value: 9, message: "Access code is too short" },
                   maxLength: { value: 9, message: "Access code is too long" },
                 })}
@@ -146,14 +155,7 @@ function FormComponent() {
                 <p className="error-message">{errors.accessCode.message}</p>
               )}
             </div>
-            <button
-              onClick={() => {
-                incrementCount();
-              }}
-              type="submit"
-            >
-              APPLY
-            </button>
+            <button type="submit">APPLY</button>
           </div>
         </div>
       </form>

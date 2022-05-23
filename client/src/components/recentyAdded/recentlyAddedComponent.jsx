@@ -11,6 +11,19 @@ Amplify.configure(awsExports);
 const RecentlyAdded = () => {
   const [items, setItems] = useState([]);
 
+  let timeStampList = [];
+
+  for (let i = 0; i < items.length; i++) {
+    if (items[i].timestamp) {
+      timeStampList.push(items[i]);
+    }
+  }
+
+  const sortedArray = timeStampList.sort((a, b) =>
+    b.timestamp.localeCompare(a.timestamp)
+  );
+  const firstFourItems = sortedArray.slice(0, 4);
+
   useEffect(() => {
     fetchItems();
   }, []);
@@ -24,17 +37,6 @@ const RecentlyAdded = () => {
       console.log(err);
     }
   };
-
-  let newItemsList = [];
-
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].walletAddress) {
-      newItemsList.push(items[i]);
-    }
-  }
-  const firstFourItems = newItemsList.slice(-4);
-
-  console.log(items);
 
   return (
     <div className="recentlyAdded-container">

@@ -21,7 +21,6 @@ const SideNav = () => {
 
   return (
     <div className="mobile-navigation-bar">
-      {/* <div className="overlay"> */}
       <div className="mobile-nav__hamburger__link" onClick={handleToggle}>
         <img src={hamburger} className="mobile-nav__hamburger" />
       </div>
@@ -75,8 +74,6 @@ const SideNav = () => {
           </div>
         </div>
       </nav>
-
-      {/* </div> */}
     </div>
   );
 };
