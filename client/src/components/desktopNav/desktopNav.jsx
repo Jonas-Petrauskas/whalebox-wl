@@ -21,7 +21,7 @@ const DesktopSideNav = () => {
   return (
     <div className="desktop-nav">
       <a href="" className="desktop-nav__whaleBox__logo">
-        <img src={whaleBoxLogo} alt="" />
+        <img src={whaleBoxLogo} alt="whalebox-logo" />
       </a>
       <nav className="desktop-nav__links">
         <ul>
@@ -32,7 +32,7 @@ const DesktopSideNav = () => {
             <img
               className="home-icon"
               src={openHome ? homeRed : homeGray}
-              alt=""
+              alt="home-icon"
             />
             <a href="">Unboxing</a>
           </li>
@@ -41,9 +41,8 @@ const DesktopSideNav = () => {
             onMouseOut={() => setOpenWL(false)}
           >
             <img
-              className=""
               src={openWL ? whitelistRed : whitelistGray}
-              alt=""
+              alt="whitelist-logo"
             />
             <a href="">Whitelist</a>
           </li>
@@ -51,7 +50,7 @@ const DesktopSideNav = () => {
             onMouseOver={() => setOpenPage(true)}
             onMouseOut={() => setOpenPage(false)}
           >
-            <img className="" src={openPage ? pageRed : pageGray} alt="" />
+            <img src={openPage ? pageRed : pageGray} alt="page-logo" />
             <a href="">How It works</a>
           </li>
         </ul>
@@ -62,10 +61,10 @@ const DesktopSideNav = () => {
       <div className="desktop-nav__bottom__container">
         <div className="desktop-nav__bottom__links">
           <a href="#">
-            <img src={twitterSvg} alt="" />
+            <img src={twitterSvg} alt="twitter" />
           </a>
           <a href="#">
-            <img src={discordSvg} alt="" />
+            <img src={discordSvg} alt="discord" />
           </a>
         </div>
         <p className="desktop-nav__bottom__text">

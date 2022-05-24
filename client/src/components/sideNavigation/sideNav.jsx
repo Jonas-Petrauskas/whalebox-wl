@@ -6,7 +6,6 @@ import hamburger from "../../assets/hamburger-ico.svg";
 import whaleBoxLogo from "../../assets/whalebox-with-bg.jpg";
 import crossIcon from "../../assets/cross-ico.svg";
 import homeGray from "../../assets/home-ico.svg";
-import homeRed from "../../assets/home-ico-red.svg";
 import pageGray from "../../assets/page-ico.svg";
 import whitelistGray from "../../assets/free-drop-ico.svg";
 import twitterSvg from "../../assets/twitter-ico.svg";
@@ -22,11 +21,11 @@ const SideNav = () => {
   return (
     <div className="mobile-navigation-bar">
       <div className="mobile-nav__hamburger__link" onClick={handleToggle}>
-        <img src={hamburger} className="mobile-nav__hamburger" />
+        <img src={hamburger} className="mobile-nav__hamburger" alt="mobile-hamb"/>
       </div>
 
       <a href="#" className="mobile-nav__logo__link">
-        <img src={whaleBoxLogo} className="mobile-nav__logo" />
+        <img src={whaleBoxLogo} className="mobile-nav__logo" alt="logo-wl" />
       </a>
       <div
         className={navbarOpen ? "overlay-active" : "overlay-not-active"}
@@ -37,33 +36,33 @@ const SideNav = () => {
         <ul>
           <div className="mobile-nav_menu__top" onClick={handleToggle}>
             <a href="#" className="mobile-nav__logo__link">
-              <img src={whaleBoxLogo} className="mobile-nav__logo" />
+              <img src={whaleBoxLogo} className="mobile-nav__logo" alt="logo-wl"/>
             </a>
-            <img src={crossIcon} className="mobine-nav__cross" />
+            <img src={crossIcon} className="mobine-nav__cross" alt="close-ico"/>
           </div>
 
           <WalletConnect />
 
           <li>
-            <img className="home-icon" src={homeGray} alt="" />
-            <a href="">Unboxing</a>
+            <img className="home-icon" src={homeGray} alt="home" />
+            <a href="#">Unboxing</a>
           </li>
           <li>
-            <img className="" src={whitelistGray} alt="" />
-            <a href="">Whitelist</a>
+            <img className="" src={whitelistGray} alt="wl-logo" />
+            <a href="#">Whitelist</a>
           </li>
           <li>
-            <img className="" src={pageGray} alt="" />
-            <a href="">How It works</a>
+            <img className="" src={pageGray} alt="page" />
+            <a href="#">How It works</a>
           </li>
         </ul>
         <div className="mobile-nav__bottom__container">
           <div className="mobile-nav__bottom__links">
             <a href="#">
-              <img src={twitterSvg} alt="" />
+              <img src={twitterSvg} alt="twitter" />
             </a>
             <a href="#">
-              <img src={discordSvg} alt="" />
+              <img src={discordSvg} alt="discord" />
             </a>
           </div>
           <div className="mobile-nav__bottom__text">
