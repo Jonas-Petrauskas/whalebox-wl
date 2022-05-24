@@ -1,6 +1,5 @@
 import "./App.scss";
 import FormComponent from "./components/form/formComponent";
-import Stats from "./components/statistics/statsComponent";
 import RecentlyAdded from "./components/recentyAdded/recentlyAddedComponent";
 import Footer from "./components/footer/footerComponent";
 import SideNav from "./components/sideNavigation/sideNav";

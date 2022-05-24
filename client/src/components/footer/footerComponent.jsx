@@ -35,10 +35,10 @@ const Footer = () => {
       <div className="footer-media">
         <div className="footer__icons">
           <a href="#">
-            <img src={twitterSvg} alt="" />
+            <img src={twitterSvg} alt="twitter" />
           </a>
           <a href="#">
-            <img src={discordSvg} alt="" />
+            <img src={discordSvg} alt="discord" />
           </a>
         </div>
         <div className="footer__copyright">©Whalebox 2022</div>
