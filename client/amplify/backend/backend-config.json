@@ -1,6 +1,6 @@
 {
   "api": {
-    "kandyfulltable": {
+    "newwhaleboxapi": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -9,7 +9,9 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2023-05-31T15:41:30.421Z",
+              "description": "whaleboxApi"
             }
           },
           "additionalAuthenticationProviders": []

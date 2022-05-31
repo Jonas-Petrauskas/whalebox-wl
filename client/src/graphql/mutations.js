@@ -26,8 +26,6 @@ export const updateTable = /* GraphQL */ `
       accessCode
       code
       timestamp
-      createdAt
-      updatedAt
     }
   }
 `;
