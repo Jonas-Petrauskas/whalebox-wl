@@ -103,7 +103,7 @@ function FormComponent() {
 
   return (
     <div className="form-position">
-      {/* <PopUp /> */}
+      <PopUp />
       <form onSubmit={handleSubmit(createItem)}>
         <div className="form-timer">
           <CountdownTimer />
